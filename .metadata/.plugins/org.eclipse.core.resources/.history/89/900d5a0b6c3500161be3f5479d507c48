@@ -1,0 +1,12 @@
+// TODO : Test Implementation
+
+/**
+ * The test class for the CandleImpl class implementation of the interface
+ * Candle.
+ * 
+ * @author Chris
+ *
+ */
+public class CandleImplTest {
+
+}

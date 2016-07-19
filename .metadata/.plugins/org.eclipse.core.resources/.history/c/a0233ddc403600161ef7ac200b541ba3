@@ -1,0 +1,7 @@
+**
+ * This Class provides the necessary functions to download stockdata from finance.yahoo.com
+ *
+ */
+class Datadownloader {
+	
+}

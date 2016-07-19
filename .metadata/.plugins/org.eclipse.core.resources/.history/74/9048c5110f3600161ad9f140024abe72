@@ -1,0 +1,47 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+// TODO : Test Implementation
+
+/**
+ * The test class for the CandleImpl class implementation of the interface
+ * Candle.
+ * 
+ * @author Chris
+ *
+ */
+public class CandleImplTest {
+
+	// values in candles
+	private static final double OPEN = 10.8;
+	private static final double HIGH = 11.5;
+	private static final double LOW = 8.7;
+	private static final double LATEST = 11.3;
+
+	// Fields of Type CandleImpl
+	private CandleImpl _candle1;
+	private CandleImpl _candle2;
+
+	// initializes the Fields to be tested.
+	public CandleImplTest() {
+		prepareTestCandles(OPEN, HIGH, LOW, LATEST);
+	}
+
+	@Test
+	public void testConstructorOne() {
+		try {
+			assertEquals(OPEN, _candle1.getOpen());
+			assertEquals(OPEN, _candle1.getHigh());
+			assertEquals(OPEN, _candle1.getLow());
+			assertEquals(OPEN, _candle1.getLatest());
+		} catch (AssertionError e) {
+			fail();
+		}
+	}
+
+	private void prepareTestCandles(double open, double high, double low, double latest) {
+		_candle1 = new CandleImpl(open);
+
+		_candle2 = new CandleImpl(open, high, low, latest);
+	}
+}

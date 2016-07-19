@@ -1,0 +1,20 @@
+//TODO: Implementation
+
+/**
+ * This class tests the functionality of the KeyValuePair Class.
+ * 
+ * @author Chris
+ *
+ */
+public class KeyValuePairTest {
+
+	// fields to initialize the Object of instance KeyValuePair
+	private static final Object KEY = new Object();
+	private static final Object VALUE = new Object();
+
+	// The field with the declaration of the KeyValuePair Object
+	private KeyValuePair _pair;
+	
+	
+
+}

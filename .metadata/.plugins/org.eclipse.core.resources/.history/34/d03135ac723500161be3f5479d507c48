@@ -1,0 +1,25 @@
+// TODO : Test Implementation
+
+/**
+ * The test class for the CandleImpl class implementation of the interface
+ * Candle.
+ * 
+ * @author Chris
+ *
+ */
+public class CandleImplTest {
+
+	// Fields of Type CandleImpl
+	private CandleImpl _test1;
+	private CandleImpl _test2;
+	private CandleImpl _test3;
+	private CandleImpl _test4;
+
+	//initialisates the Fields to be tested.
+	public CandleImplTest() {
+		_test1 = new CandleImpl(10.8);
+		_test2 = new CandleImpl(10.8, 11.3);
+		_test3 = new CandleImpl(10.8, 11.3, 8.7);
+		_test4 = new CandleImpl(10.8, 11.5, 8.7, 11.3);
+	}
+}

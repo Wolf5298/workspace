@@ -1,0 +1,4 @@
+
+public class KeyValueList<T1, T2> {
+
+}

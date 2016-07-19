@@ -1,0 +1,25 @@
+//TODO: Implementation
+
+class KeyValuePair {
+	private final Object _key;
+	private final Object _value;
+
+	public KeyValuePair(Object key, Object value) throws AssertionError {
+		assert key != null : "Vorbedingung verletzt: key !=null";
+		assert value != null : "Vorbedingung verletzt: value != null";
+
+		_key = key;
+		_value = value;
+	}
+
+	public Object getKey() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

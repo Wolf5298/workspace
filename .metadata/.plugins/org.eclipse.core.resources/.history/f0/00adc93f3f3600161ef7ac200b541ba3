@@ -1,0 +1,103 @@
+// TODO : Implementation
+
+public class CandleImpl implements Candle {
+
+	// Fields
+	private double _open;
+	private double _high;
+	private double _low;
+	private double _latest;
+
+	private boolean _closed;
+
+	@Deprecated
+	public CandleImpl() {
+
+	}
+
+	/**
+	 * Constructor that sets all Fields initially to the open value.
+	 * 
+	 * @param open
+	 *            the opening value of the candle
+	 */
+	public CandleImpl(double open) {
+		_open = open;
+		_high = open;
+		_low = open;
+		_latest = open;
+
+		_closed = false;
+	}
+
+	/**
+	 * Constructor that initializes a that already had a high/low value but is
+	 * not closed yet.
+	 * 
+	 * @param open
+	 *            the opening value
+	 * @param high
+	 *            the highest value so far
+	 * @param low
+	 *            the lowest value so far
+	 * @param latest
+	 */
+	public CandleImpl(double open, double high, double low, double latest) {
+		_open = open;
+		_high = high;
+		_low = low;
+		_latest = latest;
+
+		_closed = false;
+	}
+
+	@Override
+	public double getOpen() {
+		return _open;
+	}
+
+	@Override
+	public double getHigh() {
+		return _high;
+	}
+
+	@Override
+	public double getLow() {
+		return _low;
+	}
+
+	@Override
+	public boolean isBullish() {
+		return _closed;
+	}
+
+	@Override
+	public void refresh(double value) {
+		_latest = value;
+
+		if (_high < value) {
+			_high = value;
+		} else if (_low > value) {
+			_low = value;
+		}
+	}
+
+	@Override
+	public boolean isClosed() {
+		return _closed;
+	}
+
+	@Override
+	public void close() throws AssertionError {
+		// TODO Auto-generated method stub
+		assert this.isClosed() == false : "Precondition this.isClosed == false is neglected";
+
+		_closed = true;
+	}
+
+	@Override
+	public double getLatest() {
+		 return _latest;
+	}
+
+}

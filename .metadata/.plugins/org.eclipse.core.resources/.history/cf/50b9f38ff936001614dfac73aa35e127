@@ -1,0 +1,5 @@
+import java.util.LinkedList;
+
+public class KeyValueList<T1, T2> extends LinkedList<KeyValuePair> {
+
+}

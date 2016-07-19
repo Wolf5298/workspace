@@ -1,0 +1,11 @@
+import java.util.LinkedList;
+
+//TODO: Implementation
+
+public class KeyValueList<T1, T2> extends LinkedList<KeyValuePair> {
+
+	public KeyValueList(Object key, Object value) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

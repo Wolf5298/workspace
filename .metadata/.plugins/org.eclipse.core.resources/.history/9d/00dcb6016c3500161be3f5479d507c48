@@ -1,0 +1,67 @@
+// TODO : construction
+/**
+ * This Interface specifies a candle for usage in candle-stick-diagramms.
+ * 
+ * @author Chris
+ *
+ */
+public interface Candle {
+
+	/**
+	 * returns the opening value of the specific candle
+	 * 
+	 * @return the opening value
+	 * @ensure this.getOpen() == openingValue
+	 */
+	public double getOpen();
+
+	/**
+	 * returns the highest value during the representated time interval.
+	 * 
+	 * @return the highest value
+	 * @ensure this.getHigh() == highestValue
+	 */
+	public double getHigh();
+
+	/**
+	 * returns the lowest value during the representated time interval
+	 * 
+	 * @return the lowest value
+	 * @ensure this.getLow() == lowestValue
+	 */
+	public double getLow();
+
+	/**
+	 * returns the closing value of this candle.
+	 * 
+	 * @return the closing value
+	 * @ensure this.getClose() == closingValue
+	 */
+	public double getClose();
+
+	/**
+	 * returns true if and only if the closing value is higher than the opening
+	 * value of the representated time interval
+	 * 
+	 * @return a boolean if the candle is bullish or not
+	 * @ensure if(this.getOpen > this.getClose()) {this.isBullish() == true}
+	 */
+	public boolean isBullish() throws AssertionError;
+
+	/**
+	 * refreshes high, low and close value, if the represented time Interval
+	 * since the opening has not yet been archieved.
+	 * 
+	 * @param value
+	 *            the current value to refresh the candles state
+	 * @require this.isClosed() == false;
+	 * @ensure this.getClose() == value;
+	 */
+	public void refresh(double value);
+	
+	/**
+	 * returns true if the candle is closed
+	 * 
+	 * @return true boolean if the candle is closed.
+	 */
+}

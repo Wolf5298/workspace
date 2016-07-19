@@ -1,0 +1,48 @@
+
+//TODO: Implementation
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+/**
+ * This class tests the functionality of the KeyValuePair Class.
+ * 
+ * @author Chris
+ *
+ */
+class KeyValuePairTest {
+
+	// fields to initialize the Object of instance KeyValuePair
+	private static final Object KEY = new Object();
+	private static final Object VALUE = new Object();
+
+	// The field with the declaration of the KeyValuePair Object
+	private KeyValuePair _pair;
+
+	public KeyValuePairTest() {
+		initializePair();
+	}
+
+	private void initializePair() {
+		_pair = new KeyValuePair(KEY, VALUE);
+	}
+
+	@Test
+	public void testConstructor() {
+		// tests that both key and value mustn't be null
+		try {
+			_pair = new KeyValuePair(null, VALUE);
+			_pair = new KeyValuePair(KEY, null);
+			_pair = new KeyValuePair(null, null);
+		} catch (AssertionError ignored) {
+		}
+
+		// tests that key and value are assigned correctly.
+		try {
+			assertEquals(KEY, _pair.getKey());
+			assertEquals(VALUE, _pair.getValue());
+		} catch (AssertionError e) {
+			fail();
+		}
+	}
+}
